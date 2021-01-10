@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application: spring-data-envers-oracledb-app
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/orcl
+    username: sys as sysdba
+    password: 0rcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    show-sql: true
+    properties:
+      org.hibernate.envers.audit_table_suffix: _history
+
+logging:
+  level:
+    org.springframework: INFO
+    net.elau.example.springdataenversoracledb: DEBUG

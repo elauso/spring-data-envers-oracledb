@@ -1,0 +1,14 @@
+version: "3"
+services:
+
+  oracle19c:
+    image: oracle/database:19.3.0-ee
+    container_name: oracle19c
+    restart: unless-stopped
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      ORACLE_PDB: "orcl"
+      ORACLE_PWD: "0rcl"
+      ORACLE_MEM: 4000
