@@ -4,9 +4,12 @@ Essa aplicação se comunica com banco de dados oracle 19c utilizando o spring-d
 
 A subida do banco de dados oracle é feita via docker-compose. Para isso é necessário antes gerar a imagem do oracle-19c: https://github.com/steveswinsburg/oracle19c-docker 
 
-O driver para conexão com o banco de dados encontra-se na pasta libs/compile, que é carregado no buildpath durante a subida da aplicação.
+O driver para conexão com o banco de dados encontra-se na pasta libs/compile, que é carregado no buildpath da aplicação.
 
-Essa aplicação possui dois endpoints para cadastro e listagem de produtos.
+Essa aplicação possui dois endpoints para cadastro e listagem de produtos:
+
+- GET /api/products
+- POST /api/products
 
 ## Stack
 
@@ -37,4 +40,4 @@ ojdbc8                           | 12.2
 
 Utilize a interface do swagger: http://localhost:8080/swagger-ui.html
 
-Para verificar os registros na tabela de histórico será necessário se conectar ao banco de dados utilizando o oracle sql developer: https://www.oracle.com/tools/downloads/sqldev-downloads.html
+Para verificar os registros na tabela de histórico será necessário se conectar ao banco de dados utilizando o sql developer: https://www.oracle.com/tools/downloads/sqldev-downloads.html
