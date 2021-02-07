@@ -6,7 +6,7 @@ A subida do banco de dados oracle é feita via docker-compose. Para isso é nece
 
 O driver para conexão com o banco de dados encontra-se na pasta libs/compile, que é carregado no buildpath da aplicação.
 
-Essa aplicação possui dois endpoints para cadastro e listagem de produtos:
+A API possui dois endpoints para cadastro e listagem de produtos:
 
 - GET /api/products
 - POST /api/products
@@ -27,7 +27,7 @@ ojdbc8                           | 12.2
 * jdk11
 * docker
 * docker-compose
-* oracle19c-pdb-image
+* oracle19c-pdb-instance
 
 ## Instalação
 
